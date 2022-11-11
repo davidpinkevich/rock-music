@@ -14,7 +14,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const config = {
     entry: {
-      index: './src/index.js', // какие js файлы будут в итоговом бандле, можно перечислить нужное кол-во
+      index: './src/js/index.js', // какие js файлы будут в итоговом бандле, можно перечислить нужное кол-во
     }, 
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -26,7 +26,7 @@ const config = {
     plugins: [
         new HtmlWebpackPlugin({
           filename: 'index.html',
-          template: './src/index.html',
+          template: './src/html/index.html',
           chunks: ['index'], // какие скрипты подключать к странице
           inject: 'body', // вставить скрипт в конец тега body
           // minify: false,  отменить минификацию

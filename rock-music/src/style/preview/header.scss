@@ -2,20 +2,28 @@ header {
   padding-top: 30px;
   position: relative;
   text-align: center;
-  color: rgb(247, 230, 230);
+  color: white;
 }
 
 .header {
   &__top {
     position: relative;
+    text-align: center;
     z-index: 1;
     
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 863px) {
+      justify-content: center;
+    }
   }
   &__top-title {
     font-size: 100px;
+    @media (max-width:1120px) {
+      @include adaptiv-1000(font-size, 100, 30);
+    }
+
     text-shadow: 5px 5px 5px black;
     font-family: "Caveat";
     font-weight: 700;
@@ -23,32 +31,41 @@ header {
 }
 .logo {
   position: relative;
-  margin-right: 10px;
+  text-align: center;
   z-index: 1;
-  border-radius: 40px;
+  border-radius: 20px;
   height: 130px;
-  min-width: 220px;
+  width: 220px;
   box-shadow: inset 0px 0px 5px 5px black;
-  background: url("../../img/preview/kish4.jpg") no-repeat 80% 40%;
+  background: url("../../img/preview/kish4.jpg") no-repeat 50% 10%;
   background-size: cover;
+  @media (max-width:1120px) {
+    @include adaptiv-1000(width, 220, 160);
+    @include adaptiv-1000(height, 130, 50);
+  }
+  @media (max-width: 863px) {
+    display: none;
+  }
   &::after {
     content: "";
     position: absolute;
     left: 0;
     top: 0;
-    border-radius: 40px;
+    border-radius: 20px;
     width: 100%;
     height: 100%;
     background-color: black;
-    opacity: 0.1;
+    opacity: 0.3;
   }
   &__text {
     position: absolute;
+    z-index: 1;
     font-family: "Caveat Brush";
     bottom: 8px;
-    // font-weight: 700;
-    left: 4px;
     font-size: 54px;
-    color: black;
+    color: white;
+    @media (max-width:1120px) {
+      display: none;
+    }
   }
 }

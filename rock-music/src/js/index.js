@@ -1,8 +1,5 @@
 import "../style/preview.scss";
-import { grom } from "../audio/preview/grom.mp3";
-import { voron } from "../audio/preview/voron.mp3";
+import { makeSound } from "./modules-preview/sound";
 
-
-console.log("Hello World!");
-
+makeSound(); // на 3 кнопке включается звуковое сопровождение 
 

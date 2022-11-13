@@ -1,0 +1,23 @@
+.genre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__item {
+    font-family: "Yanone Kaffeesatz";
+    font-weight: 700;
+    width: 500px;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    border: 1px solid black;
+  }
+}
+
+.main {
+  &__task {
+    width: 100%;
+    height: 50px;
+    background-color: firebrick;
+  }
+}

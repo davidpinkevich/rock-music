@@ -19,13 +19,13 @@ header {
     }
   }
   &__top-title {
-    font-size: 100px;
+    font-size: 110px;
     @media (max-width:1120px) {
-      @include adaptiv-1000(font-size, 100, 30);
+      @include adaptiv-1000(font-size, 110, 30);
     }
 
     text-shadow: 5px 5px 5px black;
-    font-family: "Caveat";
+    font-family: "Yanone Kaffeesatz";
     font-weight: 700;
   }
 }
@@ -60,9 +60,10 @@ header {
   &__text {
     position: absolute;
     z-index: 1;
-    font-family: "Caveat Brush";
+    font-family: "Yanone Kaffeesatz";
     bottom: 8px;
-    font-size: 54px;
+    font-size: 66px;
+    text-shadow: 5px 5px 5px black;
     color: white;
     @media (max-width:1120px) {
       display: none;

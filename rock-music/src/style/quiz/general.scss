@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400;700&display=swap');
+//"Yanone Kaffeesatz"
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+//"Caveat Brush"
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+//"Marck Script"
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Marck+Script&display=swap');
+//"Caveat"
+
+@mixin adaptiv-1000($property, $startSize, $minSize) {
+	#{$property}: calc(#{$minSize + px} + (#{$startSize} - #{$minSize}) * ((100vw - 320px) / (1220 - 320)));
+}
+
+[class*="__container"]{
+  max-width: 1120px;
+  margin: 0 auto;
+}

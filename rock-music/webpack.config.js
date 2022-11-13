@@ -15,6 +15,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const config = {
     entry: {
       index: './src/js/index.js', // какие js файлы будут в итоговом бандле, можно перечислить нужное кол-во
+      quiz: './src/js/quiz.js'
     }, 
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -32,6 +33,14 @@ const config = {
           // minify: false,  отменить минификацию
         }),
         
+        new HtmlWebpackPlugin({
+          filename: 'quiz.html',
+          template: './src/html/quiz.html',
+          chunks: ['quiz'], // какие скрипты подключать к странице
+          inject: 'body', // вставить скрипт в конец тега body
+          // minify: false,  отменить минификацию
+        }),
+
         new CleanWebpackPlugin()
         // Add your plugins here
         // Learn more about plugins from https://webpack.js.org/configuration/plugins/

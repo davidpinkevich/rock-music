@@ -5,18 +5,13 @@ export function createBlock(n) {
   const blokQuestion = document.querySelector(".task__img");
   blokQuestion.innerHTML = `<img class="task__img-mask" src="${mask}"></img>`;
 
-  let random = getRandom(6);
-  console.log(random)
   const blocks = blockItems[n];
-  console.log(blocks)
-  for (let i = 0; i < blocks.length; i++) {
-    let number = random[i];
+  for (const block of blocks) {
     const bodyItems = document.querySelector(".options");
     const item = document.createElement("div");
-    item.setAttribute("id", blocks[number].id);
+    item.setAttribute("id", block.id);
     item.className = "options__item";
-    item.innerText = blocks[number].name;
+    item.innerText = block.name;
     bodyItems.append(item);
-    console.log(random[i])
   }
 }

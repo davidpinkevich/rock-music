@@ -1,5 +1,6 @@
 import { blockItems } from "./block-items";
-
+import { createPlayerMini } from "./mini-player";
+//
 
 export function createBlockInfo(a, b) {
   const blockInfo = document.querySelector(".info");
@@ -22,6 +23,12 @@ export function createBlockInfo(a, b) {
   groupSound.className = "names__sound";
   groupSound.innerText = `${blockItems[a][b].sound}`;
   blockNames.append(groupSound);
+
+  // добавить плеер--------------------
+  const miniPlayer = document.querySelector(".names");
+  createPlayerMini(blockNames, a, b);
+//--------------------------------
+
 
   const blockDescription = document.createElement("div");
   blockDescription.className = "info__main";

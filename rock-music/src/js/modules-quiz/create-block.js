@@ -89,11 +89,17 @@ if(genreItems[click - 1]) genreItems[click - 1].classList.remove("active");
         
 //--------событие на кнопку снизу (для перехода)
         activeBtn.addEventListener("click", function(event) {
+          let lang = localStorage.getItem("lang");
           const playerQuest = document.querySelector(".player");
           const bodyItems = document.querySelector(".options");
           const questions = document.querySelector(".info");
           playerQuest.remove();
-          questions.innerHTML = "Послушай песню и реши, кто этот злобный гений...";
+          if (lang == "eng") {
+            questions.innerHTML = "Listen to the song and decide who this evil genius is...";
+          } else {
+            questions.innerHTML = "Послушай песню и реши, кто этот злобный гений...";
+          }
+          
           bodyItems.innerHTML = "";
           createBlock(click);
           createQuestion(click, rand[0]);

@@ -3,6 +3,7 @@ import { createPlayerMini } from "./mini-player";
 //
 
 export function createBlockInfo(a, b) {
+  const lang = localStorage.getItem("lang");
   const blockInfo = document.querySelector(".info");
   blockInfo.innerHTML ="";
   const blockContainer = document.createElement("div");
@@ -35,6 +36,12 @@ export function createBlockInfo(a, b) {
   blockInfo.append(blockDescription);
 
   const description = document.createElement("p");
-  description.innerHTML = `${blockItems[a][b].description}`;
+
+  if (lang == "eng") {
+    description.innerHTML = `${blockItems[a][b].engversion}`;
+  } else {
+    description.innerHTML = `${blockItems[a][b].description}`;
+  }
+  
   blockDescription.append(description);
 }

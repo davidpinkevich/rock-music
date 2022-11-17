@@ -58,7 +58,6 @@ if(genreItems[click - 1]) genreItems[click - 1].classList.remove("active");
       if(valueQuestion == event.currentTarget.id) {
         event.currentTarget.setAttribute("id", "count")
         click++;
-        console.log(click)
 //-------при верном ответе открывается имя группы
         const question = document.querySelector(".task__question-title");
         const idQuest = question.getAttribute("value");
@@ -69,6 +68,8 @@ if(genreItems[click - 1]) genreItems[click - 1].classList.remove("active");
         let score = Math.abs(allImg.length-5);
         const mainScore = document.querySelector(".header__score>span");
         mainScore.innerHTML = +mainScore.innerHTML + +score;
+        let test = mainScore.innerHTML;
+        console.log(test)
 //-----------------------------------------------------------------------
         const blokQuestion = document.querySelector(".task__img");
         blokQuestion.innerHTML = "";
@@ -78,6 +79,7 @@ if(genreItems[click - 1]) genreItems[click - 1].classList.remove("active");
         btn.classList.add("active");
         const activeBtn = document.querySelector(".main__options-btn.active");
         if(click == 6) {
+          localStorage.setItem("score", test);
           btn.style.display = "none";
           btnResult.style.display = "block";
           btnResult.classList.add("active");

@@ -1,3 +1,13 @@
 import "../style/quiz/quiz.scss";
-import { blockItems } from "./modules-quiz/block-items";
+import { createBlock } from "./modules-quiz/create-block";
+import { createQuestion } from "./modules-quiz/block-question";
+import { getRandom } from "./modules-quiz/random";
+
+
+//
+let rand = getRandom(6);
+createBlock(0)
+createQuestion(0,rand[0])
+
+
 

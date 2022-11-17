@@ -1,5 +1,5 @@
 header {
-  padding-top: 30px;
+  padding-top: 15px;
   position: relative;
   text-align: center;
   color: white;
@@ -17,23 +17,28 @@ header {
   &__score {
     text-shadow: 5px 5px 5px black;
     font-family: "Yanone Kaffeesatz";
+    font-size: 40px;
     font-weight: 700;
+    @media (max-width:1020px){
+      @include adaptiv-1000(font-size, 40, 24);
+    }
   }
 }
 
 .logo {
+  margin-bottom: 10px;
   position: relative;
   text-align: center;
   z-index: 1;
   border-radius: 20px;
-  height: 130px;
-  width: 220px;
+  height: 100px;
+  width: 180px;
   box-shadow: inset 0px 0px 5px 5px black;
   background: url("../../img/preview/kish4.jpg") no-repeat 50% 10%;
   background-size: cover;
   @media (max-width:1120px) {
-    @include adaptiv-1000(width, 220, 160);
-    @include adaptiv-1000(height, 130, 50);
+    @include adaptiv-1000(width, 180, 160);
+    @include adaptiv-1000(height, 100, 50);
   }
   @media (max-width: 863px) {
     display: none;
@@ -54,7 +59,7 @@ header {
     z-index: 1;
     font-family: "Yanone Kaffeesatz";
     bottom: 8px;
-    font-size: 66px;
+    font-size: 54px;
     text-shadow: 5px 5px 5px black;
     color: white;
     @media (max-width:1120px) {

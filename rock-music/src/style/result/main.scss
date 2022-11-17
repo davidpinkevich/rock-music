@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400;700&display=swap');
+//"Yanone Kaffeesatz"
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Marck+Script&display=swap');
+//"Caveat"
+
+@mixin adaptiv-420($property, $startSize, $minSize) {
+	#{$property}: calc(#{$minSize + px} + (#{$startSize} - #{$minSize}) * ((100vw - 320px) / (420 - 320)));
+}
+
+body {
+  background: rgb(29, 27, 27);
+  padding: 0 15px;
+  padding-top: 35px;
+  font-family: "Yanone Kaffeesatz";
+  font-size: 40px;
+  color: white;
+}
+
+.result__body {
+  text-shadow: 5px 5px 5px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 14px;
+  box-shadow: inset 0px 0px 4px 4px black;
+  position: relative;
+  padding: 25px;
+  height: 600px;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (max-width:650px){
+    @include adaptiv-420(height, 600, 350);
+  }
+
+  background: url("../../img/preview/kish1.jpg") no-repeat center;
+  background-size: cover;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+  }
+}
+
+.score {
+  position: relative;
+  z-index: 1;
+}
+
+.score__info {
+  margin-bottom: 15px;
+  & span {
+    font-size: 44px;
+  }
+}
+
+.score__text {
+  font-size: 40px;
+  @media (max-width:420px){
+    @include adaptiv-420(font-size, 40, 26);
+  }
+}
+
+.btn {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.btn__restart,
+.btn__main-menu {
+  color: white;
+  transition: all 0.5s ease 0s;
+  & p {
+    position: relative;
+    z-index: 1;
+  }
+  position: relative;
+  cursor: pointer;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 54px;
+  border-radius: 8px;
+  box-shadow: inset 0px 0px 4px 4px black;
+
+  @media (max-width:420px){
+    @include adaptiv-420(font-size, 54, 38);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius:8px;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.4;
+  }
+  &:hover {
+    transition: all 0.5s ease 0s;
+    transform: scale(1.05);
+    &::after{
+      transition: all 0.5s ease 0s;
+      opacity: 0.7;
+    }
+  }
+}
+

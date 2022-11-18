@@ -1,5 +1,5 @@
 main {
-  padding-top: 25px;
+  padding-top: 5px;
   position: relative;
   text-align: center;
   z-index: 1;
@@ -16,13 +16,13 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 25px;
-  width: 650px;
+  gap: 15px;
+  width: 600px;
   margin: 0 auto;
   text-shadow: 5px 5px 5px black;
   @media (max-width:1120px) {
-    @include adaptiv-1000(gap, 25, 8);
-    @include adaptiv-1000(width, 650, 280);
+    @include adaptiv-1000(gap, 15, 8);
+    @include adaptiv-1000(width, 600, 280);
   }
   &__item {
     transition: all 0.5s ease 0s;
@@ -31,7 +31,7 @@ main {
     color: white;
     cursor: pointer;
     box-shadow: inset 0px 0px 4px 4px black;
-    padding: 5px 0 12px 0;
+    padding: 14px 0 14px 0;
     border-radius: 20px;
     font-weight: 700;
     font-family: "Yanone Kaffeesatz";
@@ -56,12 +56,12 @@ main {
     }
   }
   &__item-start, &__item-info, &__item-sound {
-    font-size: 64px;
+    font-size: 44px;
     position: relative;
     padding: 0 5px;
     z-index: 1;
     @media (max-width:1120px){
-      @include adaptiv-1000(font-size, 64, 24);
+      @include adaptiv-1000(font-size, 44, 24);
     }
   }
 }

@@ -1,0 +1,111 @@
+.player-mini {
+  min-width: 140px;
+  height: 75px;
+  // background-color: rgb(76, 75, 75);
+  border-radius: 8px;
+}
+
+.progress-body-mini {
+  border-radius: 8px;
+  height: 40px;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid white ;
+}
+//-------------для дополнений
+.progress__wrap-mini {
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: white;
+}
+.progress-mini {
+  border-radius: 4px;
+  height: 6px;
+  width: 0%;
+  background-color: black;
+}
+.progress__info-mini {
+  display: flex;
+  padding-top: 5px;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+}
+.play-sound-mini {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.play-sound-mini {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.play-mini {
+  transition: all 0.5s;
+  height: 30px;
+  width: 30px;
+  background: url("../../img/quiz/icons/player/play.svg") no-repeat;
+  background-size: contain;
+  transform: scale(1.5);
+  &:hover {
+    transform: scale(1.7);
+    transition: all 0.5s;
+  }
+}
+.play-mini.sound-on-mini {
+  transition: all 0.5s;
+  background: url("../../img/quiz/icons/player/stop.svg") no-repeat;
+  background-size: contain;
+}
+//----------------Регулятор громкости
+.volume-mini {
+  position: relative;
+  height: 20px;
+  width: 100px;
+  @media (max-width:600px){
+    @include adaptiv-1000(width, 100, 50);
+  }
+}
+.play-sound__range-mini {
+  border-radius: 4px;
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  overflow: hidden;
+  height: 6px;
+
+  &::-webkit-slider-runnable-track {
+    height: 6px;
+    background-color: white;
+  }
+
+  &::-webkit-slider-thumb {
+    background: black;
+    cursor: pointer;
+    width:10px;
+    height: 15px;
+    -webkit-appearance: none;
+    margin-top: -4px;
+    box-shadow: -200px  0 0 200px rgb(39, 38, 38);
+  }
+
+  &::-moz-range-track {
+    height: 6px;
+    background-color: white;
+  }
+
+  &::-moz-range-thumb {
+    background: #ecf0f1;
+    cursor: pointer;
+    height: 6px;
+    border-radius:0px;
+    box-shadow: -200px  0px 0px 200px#43e5f7;
+    padding: 0px;
+    margin: 0px;
+  }
+}

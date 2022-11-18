@@ -42,17 +42,17 @@
   height: 35px;
   width: 35px;
   background: url("../../img/quiz/icons/player/play.svg") no-repeat;
-  background-size: contain;
-  transform: scale(1);
+  background-size: cover;
+  transform: scale(1.5);
   &:hover {
-    transform: scale(1.2);
+    transform: scale(1.7);
     transition: all 0.5s;
   }
 }
 .play.sound-on {
   transition: all 0.5s;
-  background: url("../../img/quiz/icons/player/stop.svg") no-repeat;
-  background-size: contain;
+  background: url("../../img/quiz/icons/player/stop.svg") no-repeat center;
+  background-size: cover;
 }
 //------------Регулятор громкости
 .volume {

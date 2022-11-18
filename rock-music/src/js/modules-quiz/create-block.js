@@ -64,9 +64,9 @@ if(genreItems[click - 1]) genreItems[click - 1].classList.remove("active");
         const mainScore = document.querySelector(".header__score>span");
         mainScore.innerHTML = +mainScore.innerHTML + +score;
         let test = mainScore.innerHTML;
-        console.log(test)
 //-----------------------------------------------------------------------
         const blokQuestion = document.querySelector(".task__img");
+        blokQuestion.classList.add("preview");
         blokQuestion.innerHTML = "";
         blokQuestion.innerHTML = `<img class="task__img-mask" src="${block.fimg}"></img>`;
 
@@ -88,6 +88,12 @@ if(genreItems[click - 1]) genreItems[click - 1].classList.remove("active");
           const playerQuest = document.querySelector(".player");
           const bodyItems = document.querySelector(".options");
           const questions = document.querySelector(".info");
+
+
+          const preview = document.querySelector(".task__img");
+          preview.classList.remove("preview");
+
+
           playerQuest.remove();
           if (lang == "eng") {
             questions.innerHTML = "Listen to the song and decide who this evil genius is...";

@@ -1,4 +1,3 @@
-
 export function ruVersion() {
   const title = document.querySelector(".header__top-title");
   title.innerHTML = "Будь как дома, путник...";
@@ -26,4 +25,16 @@ export function ruVersion() {
 
   const ruleText = document.querySelector(".rule__text");
   ruleText.innerHTML = "Заходи, садись, налей себе чего-нибудь. Правила до невозможного просты, как сама смерть или любовь. Тебе нужно слушать песни и предания разных поколений и назвать, кто же скрывается под маской, за это ты получишь <span>ром!</span> Угадаешь с первого раза, мадам Жоржет нальёт тебе 5 рюмок! За каждый промох получишь на 1 меньше! Теперь ты знаешь, чeго ждать. (Нажми на любую часть коды, чтобы продолжить)";
+
+  const gallTitle = document.querySelector(".gallery__header-title");
+  gallTitle.innerHTML = "Бал лицемеров";
+
+  const gallBack = document.querySelector(".gallery__header-past");
+  gallBack.innerHTML = "Назад";
+
+  const gallNext = document.querySelector(".gallery__header-next");
+  gallNext.innerHTML = "Вперёд";
+
+  const gallHome = document.querySelector(".gallery__header-close");
+  gallHome.innerHTML = "Домой";
 }

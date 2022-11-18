@@ -6,10 +6,6 @@ import mask from "../../img/quiz/mask.jpg";
 import { createBlockInfo } from "./block-info";
 import { createQuestion } from "./block-question";
 
-import imgBase from "../../img/quiz/icons/base.jpg";
-import imgYes from "../../img/quiz/icons/yes.jpg";
-import imgNo from "../../img/quiz/icons/no.jpg";
-
 import yes from "../../audio/quiz/yes-no/yes.mp3";
 import no from "../../audio/quiz/yes-no/no.mp3";
 
@@ -43,7 +39,6 @@ if(genreItems[click - 1]) genreItems[click - 1].classList.remove("active");
 
     const itemImg = document.createElement("div");
     itemImg.className = "options__item-img";
-    itemImg.innerHTML = `<img src="${imgBase}"></img>`;
     item.append(itemImg);
 
     const itemIext = document.createElement("div");
@@ -64,7 +59,7 @@ if(genreItems[click - 1]) genreItems[click - 1].classList.remove("active");
         question.innerHTML = `${blockItems[click-1][idQuest-1].name}`;
 
 // -------------отображение очков
-        const allImg = document.querySelectorAll(".img__no");
+        const allImg = document.querySelectorAll(".no");
         let score = Math.abs(allImg.length-5);
         const mainScore = document.querySelector(".header__score>span");
         mainScore.innerHTML = +mainScore.innerHTML + +score;
@@ -107,18 +102,15 @@ if(genreItems[click - 1]) genreItems[click - 1].classList.remove("active");
           activeBtn.style.pointerEvents = "none";
         })
 //-----------------------------------------------------------------------------------------------------------
-        itemImg.innerHTML = "";
-        itemImg.innerHTML = `<img src="${imgYes}"></img>`;
+        itemImg.classList.add("yes");
         sayYes.play();
-
       } 
-      // else {
+      else {
         if(!document.querySelector(".main__options-btn").classList.contains("active")){
-          itemImg.innerHTML = "";
-          itemImg.innerHTML = `<img class="img__no" src="${imgNo}"></img>`;
+          itemImg.classList.add("no");
         }
         sayNo.play();
-      // }
+      }
     });
     item.addEventListener("click", function() {
       if (document.querySelector(".main__options-btn").classList.contains("active")) {

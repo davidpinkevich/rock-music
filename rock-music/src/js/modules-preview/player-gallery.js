@@ -136,4 +136,9 @@ audio.currentTime = (rangeX / width) * duration;
   past.addEventListener("click", () => {
     pauseMusicGall(audio);
 })
+
+  const home = document.querySelector(".gallery__header-close");
+  home.addEventListener("click", () => {
+    pauseMusicGall(audio);
+  })
 }

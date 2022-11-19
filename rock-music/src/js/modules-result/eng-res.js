@@ -14,5 +14,5 @@ export function engRes(){
   btnRestart.innerHTML = "<p>Restart</p>";
 
   const btnHome = document.querySelector(".btn__main-menu");
-  btnHome.innerHTML = "<p>At home</p>";
+  btnHome.innerHTML = "<p>Home</p>";
 }

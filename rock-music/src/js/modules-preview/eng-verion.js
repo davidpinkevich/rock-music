@@ -36,5 +36,5 @@ export function engVersion() {
   gallNext.innerHTML = "Next";
 
   const gallHome = document.querySelector(".gallery__header-close");
-  gallHome.innerHTML = "At home";
+  gallHome.innerHTML = "Home";
 }

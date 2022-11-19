@@ -4,7 +4,7 @@
 //"Caveat"
 
 @mixin adaptiv-1000($property, $startSize, $minSize) {
-	#{$property}: calc(#{$minSize + px} + (#{$startSize} - #{$minSize}) * ((100vw - 320px) / (1020 - 320)));
+	#{$property}: calc(#{$minSize + px} + (#{$startSize} - #{$minSize}) * ((100vw - 360px) / (1020 - 360)));
 }
 
 [class*="__container"]{
@@ -21,7 +21,7 @@ body {
   font-size: 30px;
 
   @media (max-width:1100px){
-    background: rgb(29, 27, 27);
+    background: rgb(58, 54, 54);
   }
 
   &::after {

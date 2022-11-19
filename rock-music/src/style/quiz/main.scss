@@ -70,31 +70,12 @@ $md2:1020px;
   }
 }
 
-@keyframes delay {
-  0% {
-    left: -100%;
-  }
-
-  50% {
-    left: -50%;
-  }
-
-  100%{
-    left: 0;
-  }
-}
-
-
 .task__img {
   position: relative;
   border-radius: 6px;
   min-width: 120px;
   min-height: 120px;
   box-shadow:  0px 0px 4px 4px black;
-  &.preview {
-    animation-name: delay;
-    animation-duration: 0.8s;
-  }
   @media (max-width:$md2){
     @include adaptiv-1000(min-width, 120, 80);
     @include adaptiv-1000(min-height, 120, 80);
@@ -188,18 +169,18 @@ $md2:1020px;
   overflow: hidden;
   gap: 10px;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 10px;
 }
 .info__header-img {
   position: relative;
-  min-width: 130px;
-  min-height: 130px;
+  width: 130px;
+  height: 130px;
   border-radius: 8px;
   box-shadow: 0px 0px 4px 4px black;
-  animation: delay 0.8s;
   @media (max-width:$md2){
-    @include adaptiv-1000(min-width, 130, 60);
-    @include adaptiv-1000(min-height, 130, 60);
+    @include adaptiv-1000(width, 130, 90);
+    @include adaptiv-1000(height, 130, 90);
   }
   img {
     position: absolute;

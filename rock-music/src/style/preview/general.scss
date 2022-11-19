@@ -8,7 +8,7 @@
 //"Caveat"
 
 @mixin adaptiv-1000($property, $startSize, $minSize) {
-	#{$property}: calc(#{$minSize + px} + (#{$startSize} - #{$minSize}) * ((100vw - 320px) / (1220 - 320)));
+	#{$property}: calc(#{$minSize + px} + (#{$startSize} - #{$minSize}) * ((100vw - 360px) / (1120 - 360)));
 }
 
 
@@ -18,7 +18,7 @@
 }
 body {
   background: url("../../img/quiz/back.jpg") no-repeat;
-  padding: 0 15px;
+  padding: 0 10px;
   height: 100vh;
   background-size: cover;
   &::after {

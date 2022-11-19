@@ -7,7 +7,7 @@
   color: white;
   text-shadow: 5px 5px 5px black;
   @media (max-width: 1120px) {
-    @include adaptiv-1000(margin-top, 45, 10);
+    @include adaptiv-1000(margin-top, 45, 65);
   }
   &__body {
     display: flex;

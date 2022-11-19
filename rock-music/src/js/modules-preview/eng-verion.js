@@ -6,7 +6,7 @@ export function engVersion() {
   start.innerHTML = "Master invites you";
 
   const info = document.querySelector(".items");
-  info.innerHTML = "Puppets (our wanderers)";
+  info.innerHTML = "Puppets (gallery)";
 
   const lang = document.querySelector(".lang");
   lang.innerHTML = "Language: Russian";

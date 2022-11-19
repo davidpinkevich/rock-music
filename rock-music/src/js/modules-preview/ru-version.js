@@ -6,7 +6,7 @@ export function ruVersion() {
   start.innerHTML = "Мастер приглашает в гости";
 
   const info = document.querySelector(".items");
-  info.innerHTML = "Марионетки (наши странники)";
+  info.innerHTML = "Марионетки (галерея)";
 
   const lang = document.querySelector(".lang");
   lang.innerHTML = "Язык: заморский";

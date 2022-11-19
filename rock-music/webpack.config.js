@@ -6,10 +6,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const isProduction = process.env.NODE_ENV == 'production';
 
-
 const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader';
-
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 
 const config = {
@@ -50,9 +49,15 @@ const config = {
           // minify: false,  отменить минификацию
         }),
 
-        new CleanWebpackPlugin()
-        // Add your plugins here
-        // Learn more about plugins from https://webpack.js.org/configuration/plugins/
+        new CleanWebpackPlugin(),
+        new CopyWebpackPlugin({
+          patterns: [
+            {
+              from: path.resolve(__dirname, 'src/img/guitar.ico'),
+              to: path.resolve(__dirname, 'dist')
+            }
+          ]
+        })
     ],
     module: {
         rules: [

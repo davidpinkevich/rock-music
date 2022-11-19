@@ -151,9 +151,9 @@ $md2:1020px;
   }
 
   &__main {
-    font-size: 24px;
+    font-size: 22px;
     @media (max-width:$md2){
-      @include adaptiv-1000(font-size, 24, 18);
+      @include adaptiv-1000(font-size, 22, 18);
       overflow: scroll;
       &::-webkit-scrollbar {
 				width: 0px;

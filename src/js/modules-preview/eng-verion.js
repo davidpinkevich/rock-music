@@ -14,9 +14,6 @@ export function engVersion() {
   const sound = document.querySelector(".main__item-sound");
   sound.innerHTML = "Voice of the dark valley";
 
-  const git = document.querySelector(".git__footer-text");
-  git.innerHTML = "Scary <br> tales...";
-
   const data = document.querySelector(".footer__date-year");
   data.innerHTML = "2022...<span>Months, years flew by In the <br>merry realm of the dwarf jester!</span>";
 

@@ -14,9 +14,6 @@ export function ruVersion() {
   const sound = document.querySelector(".main__item-sound");
   sound.innerHTML = "Голос тёмной долины";
 
-  const git = document.querySelector(".git__footer-text");
-  git.innerHTML = "Страшные <br> сказки...";
-
   const data = document.querySelector(".footer__date-year");
   data.innerHTML = "2022...<span>Летели месяцы, года <br>В веселом царстве карлика-шута!</span>";
 

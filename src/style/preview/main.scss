@@ -8,21 +8,16 @@ main {
   }
 }
 .main {
-  background: url("../../img/preview/kish6.jpg") no-repeat 50%;
-  box-shadow: inset 0px 0px 5px 5px black;
-  padding: 35px 25px;
-  background-size: cover;
-  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 20px;
-  width: 600px;
+  gap: 15px;
+  width: 700px;
   margin: 0 auto;
-  text-shadow: 5px 5px 5px black;
+  margin-top: 20px;
   @media (max-width:1120px) {
     @include adaptiv-1000(gap, 20, 15);
-    @include adaptiv-1000(width, 600, 340);
+    @include adaptiv-1000(width, 700, 340);
   }
   &__item {
     transition: all 0.5s ease 0s;
@@ -31,7 +26,7 @@ main {
     color: white;
     cursor: pointer;
     box-shadow: inset 0px 0px 4px 4px black;
-    padding: 14px 0 14px 0;
+    padding: 18px 0px;
     border-radius: 20px;
     font-weight: 700;
     font-family: "Yanone Kaffeesatz";
@@ -44,14 +39,14 @@ main {
       width: 100%;
       height: 100%;
       background-color: black;
-      opacity: 0.4;
+      opacity: 0.6;
     }
     &:hover {
       transition: all 0.5s ease 0s;
       transform: scale(1.05);
       &::after{
         transition: all 0.5s ease 0s;
-        opacity: 0.7;
+        opacity: 0.8;
       }
     }
   }
